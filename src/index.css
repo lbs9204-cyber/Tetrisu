@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    overscroll-behavior: none;
+  }
+  
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Animations for Tetris game */
+@keyframes flashRow {
+  0%, 100% { opacity: 1; filter: brightness(2.5); }
+  50% { opacity: 0.15; filter: brightness(3); }
+}
+
+.animate-row-clear {
+  animation: flashRow 0.22s ease-in-out infinite;
+}
+
+@keyframes slamShake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(4px); }
+  50% { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+.shake-screen {
+  animation: slamShake 0.15s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}

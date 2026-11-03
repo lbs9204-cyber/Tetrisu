@@ -1,0 +1,6 @@
+{
+  "name": "Retro Tetris Arcade",
+  "description": "Classic guideline Tetris game featuring Marathon, 40-Line Sprint, and Ultra modes, SRS rotation, custom themes, synthesized audio FX, and responsive keyboard and touch controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
